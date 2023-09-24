@@ -26,5 +26,3 @@ const getCharObject = (input: string) => {
 
   return obj;
 };
-
-exports.validAnagram;
