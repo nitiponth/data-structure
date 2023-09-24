@@ -22,6 +22,6 @@ test("test countUniqueValues by 'bbbbbb'", () => {
 test("test countUniqueValues by 'longestsubstring'", () => {
   expect(findLongestSubstring("longestsubstring")).toBe(8);
 });
-test("test countUniqueValues by ''thisishowwedoit'", () => {
-  expect(findLongestSubstring("'thisishowwedoit")).toBe(6);
+test("test countUniqueValues by 'thisishowwedoit'", () => {
+  expect(findLongestSubstring("thisishowwedoit")).toBe(6);
 });

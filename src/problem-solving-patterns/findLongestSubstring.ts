@@ -1,17 +1,16 @@
 export const findLongestSubstring = (str: string) => {
-  if (!str.length) return 0;
-
   let longest = 0;
   let seen = {};
   let start = 0;
 
-  for (let i = 0; i < str.length; i++) {
-    let char = str[i];
+  for (let end = 0; end < str.length; end++) {
+    let char = str[end];
     if (seen[char]) {
       start = Math.max(start, seen[char]);
     }
-    longest = Math.max(longest, i - start + 1);
-    seen[char] = i + 1;
+    longest = Math.max(longest, end - start + 1);
+    seen[char] = end + 1;
   }
+
   return longest;
 };
