@@ -1,14 +1,12 @@
-const validAnagram = (str: string, toValidateStr: string) => {
-  const chars = getCharObject(str); // O(n)
-  const toValidateChars = getCharObject(toValidateStr); // O(n)
+export const validAnagram = (str: string, toValidateStr: string) => {
+  if (str.length !== toValidateStr.length) return false;
 
-  if (Object.keys(chars).length !== Object.keys(toValidateChars).length)
-    return false;
+  const charObj = getCharObject(str); // O(n)
 
   // O(n)
-  for (const key in chars) {
-    if (!(key in toValidateChars)) return false;
-    if (chars[key] !== toValidateChars[key]) return false;
+  for (const char of toValidateStr) {
+    if (!charObj[char]) return false;
+    charObj[char]--;
   }
 
   return true;
@@ -21,8 +19,19 @@ const getCharObject = (input: string) => {
     .split("") // O(n)
     .reduce((acc: Record<string, number>, char) => {
       if (char in acc) acc[char]++;
-      else acc[char] = 0;
+      else acc[char] = 1;
 
       return acc;
     }, {}); // O(n)
 };
+
+validAnagram("", "");
+validAnagram("aaz", "zza");
+validAnagram("anagram", "nagaram");
+validAnagram("rat", "car");
+validAnagram("awesome", "awesom");
+validAnagram("amanaplanacanalpanama", "acanalmanplanpamana");
+validAnagram("qwerty", "qeywrt");
+validAnagram("texttwisttime", "timetwisttext");
+
+exports.validAnagram;
