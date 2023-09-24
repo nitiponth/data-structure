@@ -12,12 +12,13 @@ export const validAnagram = (str: string, toValidateStr: string) => {
   return true;
 };
 
-// O(n) (accuracy O(3n))
+// O(n) (accuracy O(2n))
 const getCharObject = (input: string) => {
   const lowerCaseInput = input.toLowerCase(); // O(n)
 
   const obj = {};
 
+  // O(n)
   for (const char of lowerCaseInput) {
     if (char in obj) obj[char]++;
     else obj[char] = 1;
