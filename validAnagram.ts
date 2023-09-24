@@ -14,24 +14,16 @@ export const validAnagram = (str: string, toValidateStr: string) => {
 
 // O(n) (accuracy O(3n))
 const getCharObject = (input: string) => {
-  return input
-    .toLowerCase() // O(n)
-    .split("") // O(n)
-    .reduce((acc: Record<string, number>, char) => {
-      if (char in acc) acc[char]++;
-      else acc[char] = 1;
+  const lowerCaseInput = input.toLowerCase(); // O(n)
 
-      return acc;
-    }, {}); // O(n)
+  const obj = {};
+
+  for (const char of lowerCaseInput) {
+    if (char in obj) obj[char]++;
+    else obj[char] = 1;
+  }
+
+  return obj;
 };
-
-validAnagram("", "");
-validAnagram("aaz", "zza");
-validAnagram("anagram", "nagaram");
-validAnagram("rat", "car");
-validAnagram("awesome", "awesom");
-validAnagram("amanaplanacanalpanama", "acanalmanplanpamana");
-validAnagram("qwerty", "qeywrt");
-validAnagram("texttwisttime", "timetwisttext");
 
 exports.validAnagram;
