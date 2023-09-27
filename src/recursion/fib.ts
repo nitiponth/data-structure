@@ -14,10 +14,11 @@ export const fib = (num: number) => {
   const helper = (prev: number, curr: number) => {
     if (index === num) return curr;
 
+    const previous = curr;
     const current = prev + curr;
     index++;
 
-    return helper(curr, current);
+    return helper(previous, current);
   };
 
   return helper(0, 1);
