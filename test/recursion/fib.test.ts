@@ -1,11 +1,6 @@
 import { expect, test } from "vitest";
 import { fib } from "../../src/recursion/fib";
 
-// fib(4) // 3
-// fib(10) // 55
-// fib(28) // 317811
-// fib(35) // 9227465
-
 test("testing fib function by 4", () => {
   expect(fib(4)).toBe(3);
 });
