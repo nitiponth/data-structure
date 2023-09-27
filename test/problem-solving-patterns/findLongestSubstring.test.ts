@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { findLongestSubstring } from "../src/problem-solving-patterns/findLongestSubstring";
+import { findLongestSubstring } from "../../src/problem-solving-patterns/findLongestSubstring";
 
 test("test countUniqueValues by ''", () => {
   expect(findLongestSubstring("")).toBe(0);

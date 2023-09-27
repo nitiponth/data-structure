@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import { minSubArrayLen } from "../src/problem-solving-patterns/minSubArrayLen";
+import { minSubArrayLen } from "../../src/problem-solving-patterns/minSubArrayLen";
 
 test("test minSubArrayLen by [2,3,1,2,4,3] and sum equals 7, it should return 2 because [4,3] is the smallest subarray", () => {
   expect(minSubArrayLen([2, 3, 1, 2, 4, 3], 7)).toBe(2);

@@ -1,6 +1,5 @@
 import { expect, test } from "vitest";
-import { averagePair } from "../src/problem-solving-patterns/averagePair";
-import { isSubsequence } from "../src/problem-solving-patterns/isSubsequence";
+import { isSubsequence } from "../../src/problem-solving-patterns/isSubsequence";
 
 test("test isSubsequence by 'hello', 'hello world'", () => {
   expect(isSubsequence("hello", "hello world")).toBe(true);

@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { countUniqueValues } from "../src/problem-solving-patterns/countUniqueValues";
+import { countUniqueValues } from "../../src/problem-solving-patterns/countUniqueValues";
 
 test("test countUniqueValues by [1,1,1,1,1,2]", () => {
   expect(countUniqueValues([1, 1, 1, 1, 1, 2])).toBe(2);

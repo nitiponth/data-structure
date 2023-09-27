@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import { sameFrequency } from "../src/problem-solving-patterns/sameFrequency";
+import { sameFrequency } from "../../src/problem-solving-patterns/sameFrequency";
 
 test("test sameFrequency by 182,281", () => {
   expect(sameFrequency(182, 281)).toBe(true);

@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import { maxSubarraySum } from "../src/problem-solving-patterns/maxSubarraySum";
+import { maxSubarraySum } from "../../src/problem-solving-patterns/maxSubarraySum";
 
 test("test maxSubarraySum by [100,200,300,400] with size equals 2)", () => {
   expect(maxSubarraySum([100, 200, 300, 400], 2)).toBe(700);

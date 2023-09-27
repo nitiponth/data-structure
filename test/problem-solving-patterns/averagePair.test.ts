@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { averagePair } from "../src/problem-solving-patterns/averagePair";
+import { averagePair } from "../../src/problem-solving-patterns/averagePair";
 
 test("test averagePair by [1,2,3] to be 2.5", () => {
   expect(averagePair([1, 2, 3], 2.5)).toBe(true);

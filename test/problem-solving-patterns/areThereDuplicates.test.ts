@@ -2,7 +2,7 @@ import { expect, test } from "vitest";
 import {
   areThereDuplicates,
   areThereDuplicatesByMultiplePointer,
-} from "../src/problem-solving-patterns/areThereDuplicates";
+} from "../../src/problem-solving-patterns/areThereDuplicates";
 
 test("test areThereDuplicates by 1, 2, 3", () => {
   expect(areThereDuplicates(1, 2, 3)).toBe(false);

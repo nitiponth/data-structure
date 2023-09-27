@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { validAnagram } from "../src/problem-solving-patterns/validAnagram";
+import { validAnagram } from "../../src/problem-solving-patterns/validAnagram";
 
 test("test validAnagram by empty string", () => {
   expect(validAnagram("", "")).toBe(true);
